@@ -1,6 +1,7 @@
 ﻿using System;
-
 using UIKit;
+using CoreGraphics;
+using static System.Math;
 
 namespace XamariniOSSlider
 {
@@ -19,6 +20,7 @@ namespace XamariniOSSlider
 			slider.MinValue= 1;
 			slider.MaxValue = 10;
 			slider.Value = 1;
+			slider.Transform = CGAffineTransform.MakeRotation((float)PI / 2);
 
 			slider.ValueChanged += (object sender, EventArgs e) => { lblValue.Text = slider.Value.ToString();};
 
